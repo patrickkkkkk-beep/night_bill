@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>ناقوس شب</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at center, #241010 0%, #090909 55%, #000 100%);
+      color: white;
+      font-family: Tahoma, Arial, sans-serif;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      text-align: center;
+    }
+
+    .title {
+      font-size: 55px;
+      font-weight: bold;
+      color: #d60000;
+      text-shadow:
+        0 0 10px #ff0000,
+        0 0 25px #550000;
+
+      margin-bottom: 10px;
+    }
+
+    .subtitle {
+      color: #aaa;
+      font-size: 16px;
+      margin-bottom: 40px;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      margin: 8px 0;
+
+      border: none;
+      border-radius: 10px;
+
+      font-size: 18px;
+      font-weight: bold;
+
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .download-btn {
+      background: #b30000;
+      color: white;
+      box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+    }
+
+    .download-btn:hover {
+      background: #e00000;
+      transform: scale(1.03);
+    }
+
+    .versions {
+      display: none;
+      margin-top: 25px;
+      padding: 20px;
+
+      background: rgba(20, 20, 20, 0.9);
+      border: 1px solid #4b1515;
+      border-radius: 15px;
+
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.8);
+    }
+
+    .versions h2 {
+      color: #ddd;
+      margin-top: 0;
+    }
+
+    .version {
+      background: #151515;
+      border: 1px solid #292929;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px 0;
+    }
+
+    .version-name {
+      font-size: 17px;
+      margin-bottom: 10px;
+    }
+
+    .unavailable {
+      color: #777;
+      font-size: 14px;
+    }
+
+    .available {
+      color: #69ff69;
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+
+    .play-btn {
+      display: block;
+      width: 100%;
+
+      padding: 12px;
+
+      background: #168316;
+      color: white;
+
+      text-decoration: none;
+      border-radius: 8px;
+
+      font-weight: bold;
+    }
+
+    .play-btn:hover {
+      background: #20a520;
+    }
+
+    .bell {
+      font-size: 70px;
+      margin-bottom: 5px;
+
+      filter:
+        drop-shadow(0 0 10px #900)
+        drop-shadow(0 0 25px #300);
+    }
+
+    .footer {
+      margin-top: 30px;
+      color: #555;
+      font-size: 12px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+
+    <div class="bell">🔔</div>
+
+    <div class="title">
+      ناقوس شب
+    </div>
+
+    <div class="subtitle">
+      وقتی ناقوس به صدا درمیاد... شب تازه شروع میشه.
+    </div>
+
+    <button class="download-btn" onclick="showVersions()">
+      ⬇️ دانلود بازی
+    </button>
+
+    <div class="versions" id="versions">
+
+      <h2>نسخه‌های بازی</h2>
+
+      <!-- نسخه 1 -->
+      <div class="version">
+        <div class="version-name">
+          ناقوس شب دمو نسخه ۱
+        </div>
+
+        <div class="unavailable">
+          🔒 در دسترس نیست
+        </div>
+      </div>
+
+      <!-- نسخه 1.1 -->
+      <div class="version">
+        <div class="version-name">
+          ناقوس شب دمو نسخه ۱.۱
+        </div>
+
+        <div class="unavailable">
+          🔒 در دسترس نیست
+        </div>
+      </div>
+
+      <!-- نسخه 1.3 -->
+      <div class="version">
+        <div class="version-name">
+          ناقوس شب دمو نسخه ۱.۳
+        </div>
+
+        <div class="available">
+          ✅ در دسترس
+        </div>
+
+        <a
+          class="play-btn"
+          href="https://uploadkon.ir/uploads/1bb206_26ناقوس-شب-نسخه-دمو-apk.zip"
+          download
+        >
+          ⬇️ دانلود نسخه ۱.۳
+        </a>
+      </div>
+
+    </div>
+
+    <div class="footer">
+      © 2026 ناقوس شب
+    </div>
+
+  </div>
+
+  <script>
+    function showVersions() {
+      const versions = document.getElementById("versions");
+
+      if (versions.style.display === "block") {
+        versions.style.display = "none";
+      } else {
+        versions.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
